@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-train';
+  number: number = 0;
+
+  incrementHandler() {
+    this.number++;
+  }
+
+  decrementHandler() {
+    this.number--;
+  }
+
+  plusNumberHandler(number: number) {
+    this.number += number;
+  }
+
+  minusNumberHandler(number: number) {
+    this.number -= number;
+  }
 }
